@@ -1,0 +1,13 @@
+<div style="width: 80%;">
+  <h1>Editing article</h1>
+  <hr>
+  <%= form_with model: @article do |f| %>
+    <%= f.label :title, class: 'form-label' %>
+    <%= f.text_field :title, value: @article.title, class: 'form-control' %>
+    <%= f.label :content, class: 'form-label' %>
+    <%= f.text_area :content, value: @article.content, class: 'form-control' %>
+    <div class="text-center mt-3">
+      <%= f.submit 'Update article', class: 'btn btn-primary' %>
+    </div>
+  <% end %>
+</div>

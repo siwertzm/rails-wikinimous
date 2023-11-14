@@ -1,0 +1,18 @@
+<div class="container shadow p-3 bg-body-tertiary rounded" style="width: 80%;">
+  <% @articles.each do |article| %>
+    <div class="d-flex justify-content-between">
+      <div class="text-decoration-none">
+        <h2 class="form-label" for="article"><%= link_to article.title, article_path(article), class: 'text-reset' %></h2>
+        <p class="form-label" for="article"><%= article.content %></p>
+      </div>
+<%#
+      <div class="img">
+        <%= link_to "<i class='fa fa-trash' aria-hidden='true'></i>".html_safe,
+        article_path(article), class: 'text-dark',
+        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+        %> <%#
+      </div>
+%>
+    </div>
+  <% end %>
+</div>

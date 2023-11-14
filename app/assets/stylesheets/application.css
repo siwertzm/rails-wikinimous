@@ -13,3 +13,34 @@
  *= require_tree .
  *= require_self
  */
+
+ .img{
+  padding-left: 10px;
+}
+
+.edit{
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.retour{
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.edit:hover{
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+}
+
+.task{
+  position: relative;
+}
+
+.logo{
+  position: absolute;
+  right: 5px;
+}

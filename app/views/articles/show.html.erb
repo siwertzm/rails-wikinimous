@@ -1,0 +1,22 @@
+
+<div class="btn btn-outline-secondary edit">
+
+</div>
+
+
+<div class="mt-5 container pb-3" style="width: 80%">
+  <div class="d-flex justify-content-between">
+    <h3 class="card-title text-center"><%= @article.title %></h3>
+    <div class="d-flex">
+      <%= link_to "<i class='fas fa-pen'></i>".html_safe, edit_article_path, class: 'text-black' %>
+      <div class="img">
+        <%= link_to "<i class='fa fa-trash' aria-hidden='true'></i>".html_safe,
+        article_path, class: 'text-dark',
+        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+        %>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <p class="card-text"><%= @article.content %></p>
+</div>
